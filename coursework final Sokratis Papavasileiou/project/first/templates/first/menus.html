@@ -1,0 +1,45 @@
+{% extends "first/firstprojectwebpage.html"%}
+
+{% block body %}
+
+<h1 class="display-4 text-center my-5 text-muted">menu</h1>
+<div class="row">
+    <section>
+        <form class="d-flex" action="{% url "search" %}"method="POST" >
+            {% csrf_token %}
+            <h5 class="mb-4">searchbar</h5>
+            <div id="data" class="form-group"> 
+                   
+                <userdata type="Search" name="searchbar" class="form-control" id="searchbar">
+                <input type="text" name="searchbar" placeholder ="Search" aria-label = "Search" id="searchbar">
+                <button type="submit"   >Search </button>
+            </div>         
+        
+        </form>
+    </section>
+    <section>
+       
+            {% for item in all%}
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="{{item.img.url}}"  alt="error">
+                    <div class="card-body">
+                        <div class="rate">
+                            
+                        </div>
+                        <h4 class="card-title">{{item.name}}</h4>
+                        <p class="card-text">{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+            
+            {%endfor%}
+       
+    </section>
+    
+
+</div>
+
+
+    
+{% endblock %}

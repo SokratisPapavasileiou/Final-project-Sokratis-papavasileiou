@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Krioneri food</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href=" {% static 'first/css/style.css' %}">
+    <style>
+        
+        
+    </style>
+</head>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="100"   >
+    
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <div class="container">
+            <userdata type="text" id="mySearch" onkeyup="userdata()" placeholder="Search.." title="Type in a category">
+            <a class="navbar-brand order-1 mr-0" href="https://www.linkedin.com/in/sokratis-papavasileiou-3a02691b0/" target="_blank">Presented by Sokratis</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">login
+                    <a class="nav-item nav-link{% if request.path == '/first/' %}active{% endif %}" href="{% url 'userdata' %}">login</a>
+                    <a class="nav-item nav-link{% if request.path == '/first/' %}active{% endif %}" href="{% url 'about' %}">Menu catalog</a>
+                    <a class="nav-item nav-link{% if request.path == '/first/' %}active{% endif %}" href="{% url 'firstprojectwebpage' %}">home</a>
+                    <a class="nav-item nav-link{% if request.path == '/first/' %}active{% endif %}" href="{% url 'menus' %}">menu</a>
+                            
+                </div>
+            </div>
+        </div>
+
+        <form action="{% url "userdata" %}" method="POST">
+            {% csrf_token %}
+            <h5 class="mb-4">Basic Info</h5>
+            <div id="data" class="form-group"> 
+                   
+                    <userdata type="text" class="form-control" id="name">
+                    <input type="text" name="username" placeholder="username">
+            
+                <div id="data" class="form-group">
+                    
+                    <userdata type="email" class="form-control" id="email">
+                        <input type="text" name="email" placeholder="email">
+                </div>
+                <div id="data" class="form-group">
+                    
+                    <userdata type="password" class="form-control" id="password">
+                        <input type="password" name="password" placeholder="password">
+                </div>
+                <input type="submit" value="login">
+            </div>         
+        
+        </form>
+
+        {% if message %}
+        <div class="alert alert-danger" role="alert"> {{ message }} </div>
+        {% endif %}
+
+    </nav>
+
+        
+
+    
+    
+    
+    
+</body>
+</html>

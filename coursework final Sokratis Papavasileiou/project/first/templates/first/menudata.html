@@ -1,0 +1,78 @@
+{% extends "first/firstprojectwebpage.html"%}
+{%load static %}
+{% block body %}
+
+
+<section id="menu" class="pt-4"> <h1 class="display-4 text-center my-5 text-muted">menu</h1>
+    <div class="row">
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img="card-img-top" src="{% static 'first/img/pasta.jpg' %}" alt="Pasta">
+                <div class="card-body">
+                    <div class="rate">
+                        <userdata type="rating" id="star5" name="rate" value="5" />
+                        <tag for="star5" title="text">5 stars</tag>
+                        <userdata type="rating" id="star4" name="rate" value="4" />
+                        <tag for="star4" title="text">4 stars</tag>
+                        <userdata type="rating" id="star3" name="rate" value="3" />
+                        <tag for="star3" title="text">3 stars</tag>
+                        <userdata type="rating" id="star2" name="rate" value="2" />
+                        <tag for="star2" title="text">2 stars</tag>
+                        <userdata type="rating" id="star1" name="rate" value="1" />
+                        <tag for="star1" title="text">1 star</tag>
+                      </div>
+                    <h4 class="card-title">Pasta</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            
+            <div class="card mb-3">
+                
+                <div class="card-body">
+                    <div class="rate">
+                        <userdata type="rating" id="star5" name="rate" value="5" />
+                        <tag for="star5" title="text">5 stars</tag>
+                        <userdata type="rating" id="star4" name="rate" value="4" />
+                        <tag for="star4" title="text">4 stars</tag>
+                        <userdata type="rating" id="star3" name="rate" value="3" />
+                        <tag for="star3" title="text">3 stars</tag>
+                        <userdata type="rating" id="star2" name="rate" value="2" />
+                        <tag for="star2" title="text">2 stars</tag>
+                        <userdata type="rating" id="star1" name="rate" value="1" />
+                        <tag for="star1" title="text">1 star</tag>
+                      </div>
+                    <h4 class="card-title">Pizza</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="{% static 'first/static/img/burger.jpg' %}" alt="Burger">
+                <div class="card-body">
+                    <div class="rate">
+                        <userdata type="rating" id="star5" name="rate" value="5" />
+                        <tag for="star5" title="text">5 stars</tag>
+                        <userdata type="rating" id="star4" name="rate" value="4" />
+                        <tag for="star4" title="text">4 stars</tag>
+                        <userdata type="rating" id="star3" name="rate" value="3" />
+                        <tag for="star3" title="text">3 stars</tag>
+                        <userdata type="rating" id="star2" name="rate" value="2" />
+                        <tag for="star2" title="text">2 stars</tag>
+                        <userdata type="rating" id="star1" name="rate" value="1" />
+                        <tag for="star1" title="text">1 star</tag>
+                      </div>
+                    <h4 class="card-title">Burger</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+{% endblock %}

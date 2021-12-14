@@ -1,0 +1,15 @@
+
+.navbar .navbar-brand {
+  color: rgba(2, 60, 248, 0.85);
+  font-size: 1rem;
+}
+
+.jumbotron {
+  background-color: rgb(228, 215, 97);
+  background-image: url('../img/sunny.jpeg');
+  background-size: cover;
+}
+body {  
+  background-color: rgba(243, 243, 243, 0.712);
+  position: relative;
+      }

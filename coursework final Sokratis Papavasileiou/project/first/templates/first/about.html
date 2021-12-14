@@ -1,0 +1,23 @@
+{% extends "first/firstprojectwebpage.html" %}
+{% load static %}
+
+{% block body %}
+
+    <section id="store info" class="pt-4"> <h1 class="display-4 text-center my-5 text-muted">store info</h1>
+        
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="{% static 'first/img/store.jpg' %}" alt="Pasta">
+                    <div class="card-body">
+                        <div class="rate">
+                               
+                        </div>
+                        <h4 class="card-title">our store</h4>
+                        <p class="card-text">our store has been in bussiness since 1999 and has been proving the best food in all of Krioneri since </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
